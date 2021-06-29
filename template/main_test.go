@@ -11,6 +11,7 @@ type UserInfo struct {
 	Gender string
 	Age    int
 }
+
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	// 解析模板
 	files, err := template.ParseFiles("./hello.tmpl")
