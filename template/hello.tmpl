@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+</head>
+<body>
+{{ $obj := 100 }}
+{{/*{{ $age := .Age }}*/}}
+<p>Hello {{ .user.Name }} </p>
+<p>性别：{{.user.Gender}}</p>
+<p>年龄：{{.user.Age}}{{/* 这是一个注释 */}}</p>
+{{/*<p>obj：{{ obj }}</p>*/}}
+{{/*<p>age：{{ age }}</p>*/}}
+<hr>
+{{if $obj }}
+{{ $obj}}
+{{ else }}
+啥都没有
+{{end}}
+<hr>
+{{if lt .user.Age 18}}
+好好上学
+{{else}}
+夜店王子
+{{end}}
+<hr>
+
+{{ range $index, $hobby := .hobby }}
+    <p>{{$index}} - {{$hobby}}</p>
+{{else}}
+    NOTHING
+{{end}}
+<hr>
+{{/*作用域*/}}
+{{with .user}}
+<p>Hello {{ .Name }} </p>
+<p>性别：{{.Gender}}</p>
+<p>年龄：{{.Age}}{{/* 这是一个注释 */}}</p>
+{{end}}
+
+<hr>
+{{ index .hobby 2}}
+</body>
+</html>

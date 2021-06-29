@@ -1,0 +1,9 @@
+<h1 style='color:orange;'>hello GoLang</h1>
+<h2>how are you !</h2>
+<img id="yangchaoyue" src="http://www.xinhuanet.com/ent/2020-04/17/1125865718_15870267155521n.jpg">
+<button id='b1'>图片转换</button>
+<script>
+ document.getElementById('b1').onclick=function(){
+    document.getElementById('yangchaoyue').src = 'https://ugc.hitv.com/zhuanlan/20200928175716_4b6138b8-4c82-43c8-9458-306483e33156.jpg'
+ }
+</script>
